@@ -5,6 +5,7 @@ html,body {
     font-family: poppins, sans-serif;
 }
 
+
 body {
     background-attachment: fixed, fixed;
     height: 100%;
@@ -22,18 +23,33 @@ body {
   min-height: 100%;
 }
 
-
+.contact-section i {
+  letter-spacing: 2px;
+  line-height: 1.5em;
+}
 
 /* Start of Main Page */
 
-#header {
+.header {
     background-color: #DCDCDC;
     display: flex;
+    max-width: 110%;
     justify-content: space-between;
     align-items: center;
     padding: 3px 8%;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
-    position: sticky;
+    position: fixed;
+}
+
+.header2 {
+  background-color: #1A1A1B;
+  display: flex;
+  max-width: 110%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
+  position: fixed;
 }
 
 #header li {
@@ -54,34 +70,87 @@ body {
     height: 2rem;
 }
 
-#Resume {
+.dark2 {
+  color:white !important;
+}
+
+.dark3 {
+  color: #1a1a1a !important;
+}
+
+.fa-brands {
+  color: white;
+}
+
+.fa-brands2 {
+  color: black;
+}
+
+.Resume {
     padding: 5px 10px;
 }
 
- #Resume:hover {
+.Resume2 {
+  padding: 5px 10px;
+  color: white !important;
+}
+
+ .Resume:hover {
   padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.6);
 } 
 
-#service {
+.Resume2:hover {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(216, 207, 207, 0.6);
+}
+
+.service {
     padding: 5px 10px;
 }
 
-#service:hover {
+.service2 {
+  padding: 5px 10px;
+  color: white !important;
+}
+
+.service:hover {
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.6);
+}
+
+.service2:hover {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(216, 207, 207, 0.6);
 }
 
 .middle {
     padding: 5px 10px;
 }
 
+.middle2 {
+  padding: 5px 10px;
+  color: white !important;
+}
+
 .middle:hover {
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.6);
+}
+
+.middle2:hover {
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(216, 207, 207, 0.6);
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .main {
@@ -119,6 +188,7 @@ body {
 
 .langtainer {
     text-align: center;
+    margin-top: 4vh;
 }
 
 .langwrap {
@@ -177,6 +247,30 @@ body {
     border: solid 3px #DCDCDC;
     padding: 0 10vh; 
     height: 1300px;
+}
+
+.text1 {
+  color: white;
+}
+
+.text2 {
+  color: white;
+}
+
+.text3 {
+  color: white;
+}
+
+.page2-2 {
+  margin: 17vh auto;
+  max-width: calc(100% - 4em);
+  width: 80em;
+  background-color: #1A1A1B;
+  text-align: center;
+  border-radius: 2vh;
+  border: solid 3px #1A1A1B;
+  padding: 0 10vh; 
+  height: 1300px;
 }
 
 .navbar {
@@ -279,160 +373,30 @@ body {
     grid-column-gap: 50px;
     grid-row-gap: 30px;
 }
+ 
 
 /* End of Projects Page */
 
-
-
-
-/* Start of Projects Page */
-/*
-.contact {
-    position: relative;
-    min-height: 100vh;
-    padding: 50px 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 230px
+.text {
+  display: none;
 }
 
-.contact .content {
-    max-width: 800px;
-    text-align: center;
-}
 
-.contact .content h2 {
-    font-size: 36px;
-    font-weight: 500;
-    color: #fff;
-}
 
-.contact .content p {
-    font-weight: 300;
-    color: #fff;
-}
+/* Start of contact page */
 
-.container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.container .contactInfo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-.container .contactInfo .box {
-    position: relative;
-    padding: 20px 0;
-    display: flex;
-}
-
-.container .contactInfo .box .icon .icone {
-    min-width: 60px;
-    height: 60px;
-    background: #fff;
-    padding: 5px 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20%;
-    font-size: 22px;
-}
-
-.container .contactInfo .box .text {
-    display: flex;
-    margin-left: 30px;
-    font-size: 16px;
-    color: #fff;
-    flex-direction: column;
-    font-weight: 300;
-}
-
-.container .contactInfo .box .text h3 {
-    font-weight: 500;
-    color: #00bcd4;
-}
-
-.contactForm {
-    width: 40%;
-    padding: 40px;
-    background: #fff;
-
-}
-
-.contactForm h2 {
-    font-size: 30px;
-    color: #333;
-    font-weight: 500;
-}
-
-.contactForm .inputBox {
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contactForm .inputBox input,
-.contactForm .inputBox textarea {
-    width: 100%;
-    padding: 5px 0;
-    font-size: 16px;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #333;
-    outline: none;
-    resize: none;
-}
-
-.contactForm .inputBox span {
-   position: absolute;
-    Left: 0;
-   padding: 5px 0;
-   font-size: 16px;
-   margin: 10px 0;
-   pointer-events: none;
-   transition: 0.5s;
-   color: #666;
-}
-
-.contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~ span
-{
-   color: #e91e63;
-   font-size: 12px;
-}
-
-.contactForm .inputBox input[type="submit"] {
-   width: 100px;
-   background: #00bcd4;
-   color: #fff;
-   border: none;
-   cursor: pointer;
-   padding: 10px;
-    font-size: 18px;
-}
-*/
 .html3 {
-  overflow: hidden;
+  overflow:visible;
 }
 
 .contact-section {
-    margin: 27vh auto;
+    margin: 17vh auto;
     max-width: calc(100% - 4em);
     width: 97em;
     background-color: #DCDCDC;
     text-align: center;
     border-radius: 1vh;
-    height: 700px;
+    height: 100%;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -527,24 +491,7 @@ body {
   .contact-form .send-btn:hover{
     background: #0582E3;
   }
-  
-  @media screen and (max-width: 950px){
-    .contact-section {
-      flex-direction: column;
-    }
-  
-    .contact-info, .contact-form{
-      margin: 30px 50px;
-    }
-  
-    .contact-form h1{
-      font-size: 30px;
-    }
-  
-    .contact-form .text-box{
-      width: 100%;
-    }
-  }
+
   
   /*css for alert messages*/
   
@@ -577,36 +524,24 @@ body {
 
 
 
-
-@media (max-width: 1336px) {
-    .contact
-    {
-       padding: 50px;
-    }
-     .container
-    {
-       flex-direction: column;
-    }
-    .container .contactInfo
-    {
-       margin-bottom: 40px;
-    }
-    .container .contactInfo
-    {
-        width: 100%;
+@media only screen and (max-width: 2584px) {
+    .header {
+      width: 84.4%;
     }
 
-    .contactForm .inputBox {
-        min-width: 100%;
+    .header2 {
+      width: 84.4%;
     }
-}
 
+    .page2 {
+      width: 78.5%;
+      height: 1400px;
+    }
 
-
-
-
-
-@media only screen and (max-width: 1436px) {
+    .page2-2 {
+      width: 78.5%;
+      height: 1400px;
+    }
 
     .grid-container {
         display: grid;
@@ -622,33 +557,72 @@ body {
     }
 }
 
-/* Small screens */
-@media only screen and (max-width: 600px) {
-    .navbar {
-      bottom: 0;
-      width: 100vw;
-      height: 5rem;
+@media only screen and (max-width: 1432px) {
+  .page2 {
+    width: 70%;
     }
-  
-    .logo {
-      display: none;
+
+    .page2-2 {
+      width: 70%;
     }
-  
-    .navbar-nav {
-      flex-direction: row;
-    }
-  
-    .nav-link {
-      justify-content: center;
-    }
-  
-    main {
-      margin: 0;
-    }
+}
+
+@media (max-width: 1336px) {
+  .contact
+  {
+     padding: 50px;
   }
-  
+   .container
+  {
+     flex-direction: column;
+  }
+  .container .contactInfo
+  {
+     margin-bottom: 40px;
+  }
+  .container .contactInfo
+  {
+      width: 100%;
+  }
+
+  .contactForm .inputBox {
+      min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .projectwrp {
+      display: block;
+  }
+  .page2 {
+    height: 3000px;
+  }
+
+  .page2-2 {
+    height: 3000px;
+  }
+}
+
+@media only screen and (max-width: 1003px) {
+  .navbar, .navbar-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 913px) {
+  .page2 {
+    height: 2000px;
+  }
+
+  .page2-2 {
+    height: 2000px;
+  }
+}
+
   /* Large screens */
-  @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
+    
+
     .navbar {
       top: 0;
       width: 5rem;
@@ -692,3 +666,5 @@ body {
     display: block;
   }
 }
+
+
