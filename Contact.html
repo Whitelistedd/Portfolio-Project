@@ -3,17 +3,17 @@
     <head>
         <link href="./stylesheet.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-        <script src="myscripts.js"></script>
-        <title>Volxen's Portfolio</title>
+        <title>Volxen's Portfolio 1</title>
+        <script src="./contact.js"></script>
         <script src="https://kit.fontawesome.com/9c5347d24a.js" crossorigin="anonymous"></script>
     </head>
-    <header id="header">
-        <a href="./index.html"><i class="fa-solid fa-house-chimney fa-xl"></i></a>
+    <header id="header5" class="header3" >
+        <a href="./index.html" ><i id="dark1" class="fa-solid fa-house fa-xl dark1"></i></a>
         <nav>
             <ul>
-                <li><a href="./Projects.html" class="middle">Projects</a></li>
-                <li><a href="./Contact.html" id="service">Contact</a></li>
-                <li><a id="Resume" href="#">Resume</a></li>
+                <li><a href="./Projects.html" id="middle" class="middle">Projects</a></li>
+                <li><a href="./Contact.html" id="service" class="service">Contact</a></li>
+                <li><a href="" id="Resume" class="Resume" href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -41,29 +41,29 @@
     
           <li class="nav-item">
             <a href="https://github.com/Whitelistedd" target="#" class="nav-link">
-              <i class="fa-brands fa-github-square fa-2xl" style="--fa-secondary-opacity: 1.0; --fa-primary-color: sandybrown; --fa-secondary-color: bisque;"></i>
+              <i id="fa-github" class="fa-brands fa-github-square fa-2xl"></i>
               <span class="link-text">Github</span>
             </a>
           </li>
     
           <li class="nav-item">
             <a href="https://www.linkedin.com/in/ismonov-mukhammad-9aa531225/" target="#" class="nav-link">
-              <i class="fa-brands fa-linkedin fa-2xl"></i>
+              <i id="fa-linkedin" class="fa-brands fa-linkedin fa-2xl"></i>
               <span class="link-text">LinkedIn</span>
             </a>
           </li>
     
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fa-brands fa-twitter-square fa-2xl"></i>
+              <i id="fa-twitter-square" class="fa-brands fa-twitter-square fa-2xl"></i>
               <span class="link-text">Twitter</span>
             </a>
           </li>
     
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fa-solid fa-scroll fa-2xl"></i>
-              <span class="link-text">Resume</span>
+            <a class="nav-link darkmode" onclick="helo()">
+              <i id="fa-moon" class="fa-solid fa-moon fa-2xl"></i>
+              <span class="link-text">Dark Mode</span>
             </a>
           </li>
     
@@ -149,17 +149,17 @@
           </li>
         </ul>
       </nav>
-      <div class="contact-section">
+      <div id="contact-section" class="contact-section">
           <div class="contact-info">
-              <i class="fas fa-solid fa-location-dot"><br><a href="https://www.google.com/maps/place/Moscow/@55.5815245,36.8251405,9z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999" target="#">Moscow</a></i>
-              <i class="fas fa-solid fa-envelope"><br>ismonovmukh@gmail.com</i>
+              <i id="text1" class="fas fa-solid fa-location-dot"><br><a href="https://www.google.com/maps/place/Moscow/@55.5815245,36.8251405,9z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999" target="#">Moscow</a></i>
+              <i id="text2" class="fas fa-solid fa-envelope"><br><a id="text2" class="">ismonovmukh@gmail.com</a></i>
           </div>
           <div class="contact-form">
-              <h1>Contact Us</h1>
+              <h1 id="text3" class="" >Contact Us</h1>
               <form class="contact" action="mailto:ismonovmukh@gmail.com" method="post">
-                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
-                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
-                  <textarea name="Message" rows="5" cols="80"></textarea>
+                <input type="text" name="name" id="text-box1" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" id="text-box2" class="text-box" placeholder="Your Email" required>
+                  <textarea id="text-area" class="textarea" name="Message" rows="5" cols="80"></textarea>
                   <input value="SUBMIT" name="submit" class="send-btn" type="submit" >
               </form>
           </div>

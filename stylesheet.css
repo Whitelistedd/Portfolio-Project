@@ -5,6 +5,10 @@ html,body {
     font-family: poppins, sans-serif;
 }
 
+a {
+  font-family: poppins, sans-serif;
+}
+
 
 body {
     background-attachment: fixed, fixed;
@@ -52,6 +56,29 @@ body {
   position: fixed;
 }
 
+.header3 {
+  background-color: #DCDCDC;
+  display: flex;
+  max-width: 110%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
+  position: sticky;
+}
+
+.header4 {
+  background-color: #1A1A1B;
+  display: flex;
+  max-width: 110%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.7);
+  position: sticky;
+}
+
+
 #header li {
     list-style: none;
     display: inline;
@@ -62,6 +89,19 @@ body {
     color: black;
     text-decoration: none;
     font-family: poppins, sans-serif;
+}
+
+
+#header5 li {
+  list-style: none;
+  display: inline;
+  padding: 0px 16px;
+}
+
+#header5 a {
+  color: black;
+  text-decoration: none;
+  font-family: poppins, sans-serif;
 }
 
 #home {
@@ -250,15 +290,15 @@ a:hover {
 }
 
 .text1 {
-  color: white;
+  color: white !important;
 }
 
 .text2 {
-  color: white;
+  color: white !important;
 }
 
 .text3 {
-  color: white;
+  color: white !important;
 }
 
 .page2-2 {
@@ -386,7 +426,7 @@ a:hover {
 /* Start of contact page */
 
 .html3 {
-  overflow:visible;
+  overflow:hidden;
 }
 
 .contact-section {
@@ -401,6 +441,20 @@ a:hover {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+}
+
+.contact-section2 {
+  margin: 17vh auto;
+  max-width: calc(100% - 4em);
+  width: 97em;
+  background-color: #1A1A1B;
+  text-align: center;
+  border-radius: 1vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .contact-info{
@@ -450,14 +504,45 @@ a:hover {
     margin-bottom: 20px;
     opacity: 0.9;
 }
+
+.contact-form .text-box2 {
+  flex-wrap: nowrap;
+  background: #DCDCDC;
+  color: #1A1A1B;
+  border: none;
+  width: calc(50% - 30px);
+  height: 50px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
   
   .contact-form .text-box:first-child{
     margin-right: 16px;
   }
   
-  .contact-form textarea{
+  .contact-form .textarea {
     background: #000;
     color: #fff;
+    border: none;
+    width: 97%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+
+  .contact-form .textarea2 {
+    background: #DCDCDC !important;
+    color: #1A1A1B !important;
     border: none;
     width: 97%;
     padding: 12px;
