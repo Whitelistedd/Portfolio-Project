@@ -394,7 +394,8 @@ li {
   }
 
   .active {
-    left: -9.5%;
+    margin-top: 3%;
+    left: -5.5%;
   }
 }
 
