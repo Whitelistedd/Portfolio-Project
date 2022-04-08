@@ -101,8 +101,26 @@ li {
 }
 
 .lang {
-  height: 50px;
+  height: 60%;
   max-width: 100%;
+  transition: 0.6s ease-in-out;
+}
+
+.AboutMePage h2 {
+  font-size: 2rem;
+}
+
+.AboutMePage h3 {
+  font-size: 1.7rem;
+}
+
+.AboutMePage a {
+  width: 100px;
+}
+
+.lang:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
 }
 
 .me-container {
