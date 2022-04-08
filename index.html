@@ -3,21 +3,24 @@
     <head>
         <link href="./stylesheet.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Poppins:wght@600&display=swap" rel="stylesheet">
-        <title>Volxen's Portfolio 1</title>
-        <script src="./myscripts.js"></script>
+        <title>Volxen's Portfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/9c5347d24a.js" crossorigin="anonymous"></script>
+        <script src="./scripts.js"></script>
     </head>
     <header id="header" class="header">
-        <a href="./index.html" ><i id="dark1" class="fa-solid fa-house fa-xl dark1"></i></a>
+        <a href="./index.html" ><i id="dark1" class="fa-solid fa-house fa-xl dark2"></i></a>
         <nav>
-            <ul>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="./Projects.html" id="middle" class="middle">Projects</a></li>
                 <li><a href="./Contact.html" id="service" class="service">Contact</a></li>
                 <li><a href="" id="Resume" class="Resume" href="#">Resume</a></li>
             </ul>
+            <span><i onclick="Menu()" id="Menu" class="fa-solid fa-xl fa-bars"></i></span>
         </nav>
     </header>
-    <body>
+    <body id="body">
       <nav class="navbar">
         <ul class="navbar-nav">
           <li class="logo">
@@ -60,8 +63,8 @@
             </a>
           </li>
     
-          <li class="nav-item">
-            <a class="nav-link darkmode" onclick="helo()">
+          <li class="nav-item" onclick="darkmodeToggle()">
+            <a class="nav-link">
               <i id="fa-moon" class="fa-solid fa-moon fa-2xl"></i>
               <span class="link-text">Dark Mode</span>
             </a>
@@ -150,43 +153,63 @@
         </ul>
       </nav>
     
-        <div class="HOMEpage">
-            <div class="main">
-                <div class="imgwrap">
-                    <img class="pfp" src="./images/ProfilePictureMaker.png" alt="pfp">
-                    <h1><strong>Software Developer</strong></h1>
-                    <h3>Welcome To My Portfolio</h3>
-                </div>
-            </div>
-        </div>
-        <div id="page2" class="page2">
-          <div class="langtainer">
-            <div class="langwrap">
-                <a href="https://en.wikipedia.org/wiki/HTML5" target="#"><img class="lang" src="./images/HTML5_badge-700x700.png"></a>
-                <a href="https://en.wikipedia.org/wiki/CSS#CSS_3" target="#"><img class="lang" src="./images/css3-logo.png"></a>
-                <a href="https://en.wikipedia.org/wiki/JavaScript" target="#"><img class="lang" src="./images/PinClipart.com_ambitious-clipart_3712206.png"></a>
-                <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="#"><img class="lang" src="./images/PinClipart.com_open-clip-art-library_1358798.png"></a>
-                <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="#"><img class="lang" src="./images/PinClipart.com_typing-clipart_87985.png"></a>
-                <a href="https://en.wikipedia.org/wiki/Git" target="#"><img class="lang" src="./images/PinClipart.com_rasberry-clipart_1475273.png"></a>
-                <a href="https://en.wikipedia.org/wiki/GitHub" target="#"><img class="lang" src="./images/PinClipart.com_cthulhu-clipart_5340847.png"></a>
-                <a href="https://en.wikipedia.org/wiki/Terminal_emulator" target="#"><img class="lang" src="./images/PinClipart.com_programmer-clipart_3445944.png"></a>
-            </div>
+      <div class="HOMEpage">
+          <div class="main">
+              <div class="imgwrap">
+                  <img class="pfp" src="./images/ProfilePictureMaker.png" alt="pfp">
+                  <h1><strong>Software Developer</strong></h1>
+                  <h3>Welcome To My Portfolio</h3>
+              </div>
           </div>
-            <div class="me-container">
-                <div class="about-me">
-                    <h2 id="text1" class="" >About me</h2>
-                    <h3 id="text2" class="" >Hi! I'm Muha, I am a self-taught passionate software developer that wants to keep working and improving my skills with teamwork and productivity.</h3>
-                </div>
-            </div>
-            <div class="projectainer">
-              <h3 id="text3" class="" >Projects</h3>
-              <div class="projectwrp">
-                <img class="project-1" src="./images/Screenshot 2022-03-24 111748.png">
-                <img class="project-2" src="./images/Screenshot 2022-03-24 111748.png">
-                <img class="project-3" src="./images/Screenshot 2022-03-24 111748.png">
-                <img class="project-4" src="./images/Screenshot 2022-03-24 111748.png">
+      </div>
+      <div id="AboutMePage" class="AboutMePage">
+        <div class="langtainer">
+          <h3>Skills</h3>
+          <br>
+          <div class="langwrap">
+              <a href="https://en.wikipedia.org/wiki/HTML5" target="#"><img class="lang" src="./images/HTML5_badge-700x700.png"></a>
+              <a href="https://en.wikipedia.org/wiki/CSS#CSS_3" target="#"><img class="lang" src="./images/css3-logo.png"></a>
+              <a href="https://en.wikipedia.org/wiki/JavaScript" target="#"><img class="lang" src="./images/PinClipart.com_ambitious-clipart_3712206.png"></a>
+              <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="#"><img class="lang" src="./images/PinClipart.com_open-clip-art-library_1358798.png"></a>
+              <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="#"><img class="lang" src="./images/PinClipart.com_typing-clipart_87985.png"></a>
+              <a href="https://en.wikipedia.org/wiki/Git" target="#"><img class="lang" src="./images/PinClipart.com_rasberry-clipart_1475273.png"></a>
+              <a href="https://en.wikipedia.org/wiki/GitHub" target="#"><img class="lang" src="./images/PinClipart.com_cthulhu-clipart_5340847.png"></a>
+              <a href="https://en.wikipedia.org/wiki/Terminal_emulator" target="#"><img class="lang" src="./images/PinClipart.com_programmer-clipart_3445944.png"></a>
+          </div>
+        </div>
+        <div class="me-container">
+          <div class="about-me">
+            <h2 id="text1" class="" >About me</h2>
+            <h3 id="text2" class="" >Hi! I'm Muha, I am a self-taught passionate software developer that wants to keep working and improving my skills with teamwork and productivity.</h3>
+          </div>
+        </div>
+          <!-- <div class="contain">
+            <div class="card" style="width: 18rem;">
+              <img src="./images/5f511f26d8bf3900040fd636.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 1
+                </h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/Whitelistedd" target="_blank" class="btn btn-primary">Checkout Project</a>
               </div>
             </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./images/5f511f26d8bf3900040fd636.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/Whitelistedd"  target="_blank"class="btn btn-primary">Checkout Project</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="./images/5f511f26d8bf3900040fd636.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Project 3</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://github.com/Whitelistedd" target="_blank" class="btn btn-primary">Checkout Project</a>
+              </div>
+            </div> 
+          </div> --->
         </div>
     </body>
 </html>
