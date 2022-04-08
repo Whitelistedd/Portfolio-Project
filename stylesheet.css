@@ -375,6 +375,7 @@ li {
     display: flex;
     font-size: 19px;
     position: fixed;
+    margin-top: 3%;
     left: 100%;
     top: 70px;
     gap: 0;
@@ -399,11 +400,15 @@ li {
   }
 }
 
-@media only screen and (max-width: 468px) {
+@media only screen and (max-width: 492px) {
   .active {
     margin-top: 3%;
     left: -9%;
-  } 
+  }
+
+  .imgwrap h1, .imgwrap h3 {
+    line-height: 50px;
+  }
 }
 
 @media only screen and (max-width: 1003px) {
