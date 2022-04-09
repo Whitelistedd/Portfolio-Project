@@ -250,11 +250,24 @@ li {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
+.card2 {
+  background-image: url(./images/project.jpg) !important;
+}
+
+.card3 {
+  background-image: url(./images/project.jpg) !important;
+}
+
+.card1,
+.card2,
+.card3 {
+  background-position: center;
   font-size: 1.1rem;
   color: var(--white);
-  background-image: url(./images/project.jpg);
+  background-image: url(./images/project1.png);
   background-size: cover;
+  background-position: 47%;
+  background-repeat: no-repeat;
   padding: 13rem 0 0;
   max-width: 35ch;
   border-radius: 3%;
@@ -262,7 +275,9 @@ li {
   overflow: hidden;
 }
 
-.card:hover,
+.card1:hover,
+.card2:hover,
+.card3:hover,
 .card:focus-within {
   transform: scale(1.05);
 }
@@ -276,17 +291,24 @@ li {
     hsl(0 0% 0% / 1)
   );
   border-radius: 3%;
- transform: translateY(63%);
+ transform: translateY(65%);
   transition: 800ms ease;
 }
 
-.card:hover .card-content,
-.card:focus-within .card-content {
+.card1:hover .card-content,
+.card2:hover .card-content,
+.card3:hover .card-content,
+.card1:focus-within .card-content,
+.card2:focus-within .card-content,
+.card3:focus-within .card-content
+ {
   transform: translateY(0%);
   transition-delay: 0.2s;
 }
 
-.card:focus-within .card-content {
+.card:focus-within .card-content,
+.card2:focus-within .card-content,
+.card3:focus-within .card-content {
   transition-duration: 0ms;
 }
 
@@ -308,8 +330,12 @@ li {
   transform-origin: left;
 }
 
-.card:hover .card-title::after,
-.card:focus-within {
+.card1:hover .card-title::after,
+.card1:focus-within,
+.card2:hover .card-title::after,
+.card2:focus-within,
+.card3:hover .card-title::after,
+.card3:focus-within {
   transform: scaleX(1);
   transition-delay: 0.7s;
 }
