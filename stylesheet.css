@@ -1,4 +1,11 @@
 /* General */
+:root {
+  --primary-clr: #445B64;
+  --darkmode-clr: #14212B;
+  --white: white;
+  --input: #314852;
+}
+
 html {
     height: 100%;
     margin: 0px;
@@ -14,11 +21,12 @@ a {
 
 
 body {
-    color: white !important;
+    color: var(--white) !important;
     background-attachment: fixed, fixed;
     height: 100%;
-    background-color: #445B64;
+    background-color: var(--primary-clr);
     transition: 0.6s ease-in;
+    width: 99%;
 }
 
 /* General */
@@ -65,7 +73,7 @@ li {
 
 .service, .middle, .Resume {
   padding: 10px 20px;
-    color: white !important;
+    color: var(--white) !important;
 }
 
 /* Nav Bar */
@@ -103,7 +111,7 @@ li {
 .lang {
   height: 60%;
   max-width: 100%;
-  transition: 0.6s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .AboutMePage h2 {
@@ -119,7 +127,7 @@ li {
 }
 
 .lang:hover {
-  opacity: 0.7;
+  opacity: 0.6;
   transition: 0.3s ease-in-out;
 }
 
@@ -135,7 +143,7 @@ li {
 .AboutMePage {
     margin: 26vh auto;
     max-width: calc(70% - 4em);
-    background-color: #445B64;
+    background-color: var(--primary-clr);
     transition: 0.6s ease-in;
     text-align: center;
     height: 100%;
@@ -150,12 +158,12 @@ li {
 /* Side Bar */
 
 .dark2, .fa-brands {
-  color: white !important;
+  color: var(--white) !important;
 }
 
 .fa-moon {
   cursor: pointer;
-  color: white;
+  color: var(--white);
 }
 
 .navbar {
@@ -183,7 +191,7 @@ li {
     display: flex;
     align-items: center;
     height: 5rem;
-    color: white;
+    color: var(--white);
     text-decoration: none;
     filter: grayscale(100%) opacity(1);
 }
@@ -224,22 +232,115 @@ li {
 }
 
 .dark2, .fa-brands {
-  color: white !important;
+  color: var(--white) !important;
 }
 
 /* Side Bar */
+
+/* Projects */
+
+.contain {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  line-height: 1.6;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  padding: 0px 9rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  font-size: 1.1rem;
+  color: var(--white);
+  background-image: url(./images/project.jpg);
+  background-size: cover;
+  padding: 13rem 0 0;
+  max-width: 35ch;
+  border-radius: 3%;
+  transition: transform 500ms ease;
+  overflow: hidden;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(1.05);
+}
+
+.card-content {
+  --size: 1em;
+  padding: 1.5em;
+  background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(20 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+  );
+  border-radius: 3%;
+ transform: translateY(63%);
+  transition: 800ms ease;
+}
+
+.card:hover .card-content,
+.card:focus-within .card-content {
+  transform: translateY(0%);
+  transition-delay: 0.2s;
+}
+
+.card:focus-within .card-content {
+  transition-duration: 0ms;
+}
+
+.card-title {
+  position: relative;
+  width: max-content;
+}
+
+.card-title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  left: calc(var(--size) * -1);
+  bottom: 0;
+  background-color: #0582E3;
+  width: calc(100% + var(--size));
+  transform: scaleX(0);
+  transition: 500ms ease;
+  transform-origin: left;
+}
+
+.card:hover .card-title::after,
+.card:focus-within {
+  transform: scaleX(1);
+  transition-delay: 0.7s;
+}
+
+.buttonn {
+  cursor: pointer;
+  display: inline;
+  color: wheat;
+  background-color: #0582E3;
+  padding: 0.4em 0.8em;
+}
+
+.buttonn:hover,
+.buttonn:focus {
+  background-color: var(--darkmode-clr);
+  transition: 0.6s;
+}
+
+/* Projects */
 
 /* Contact Page */
 
 .contact-section a, #text3 {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .contact-section {
     align-items: center;
     width: 97em;
-    color: white;
+    color: var(--white);
     border-radius: 1vh;
     height: 100%;
     display: flex;
@@ -248,7 +349,7 @@ li {
     flex-direction: column;
     margin: 17vh auto;
     max-width: calc(70% - 4em);
-    background-color: #445B64;
+    background-color: var(--primary-clr);
     text-align: center;
 }
 
@@ -283,7 +384,7 @@ li {
   
   .contact-form .text-box  {
     flex-wrap: nowrap;
-    background: #36505a;
+    background: var(--input);
     color: black;
     border: none;
     width: calc(51% - 30px);
@@ -300,8 +401,8 @@ li {
   }
   
   .contact-form .textarea {
-    background: #36505a;
-    color: #fff;
+    background: var(--input);
+    color: var(--white);
     border: none;
     width: 97%;
     padding: 12px;
@@ -317,7 +418,7 @@ li {
   .contact-form .send-btn{
     float: right;
     background: #2E94E3;
-    color: #fff;
+    color: var(--white);
     border: none;
     width: 120px;
     height: 40px;
@@ -330,6 +431,12 @@ li {
     transition: 0.3s;
     transition-property: background;
   }
+
+  .submitbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
   .contact-form .send-btn:hover{
     background: #0582E3;
@@ -339,14 +446,26 @@ li {
 
 /* Javascript related css */
 
-.darkmode2, .darkmode3 {
-  background-color: #14212B;
+.darkmode2, .darkmode3, .darkmode4 {
+  background-color: var(--darkmode-clr) !important;
   transition: 0.6s ease-in;
 }
 
 /* Javascript related css */
 
 /* Media Queries */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms
+    !important;
+    animation-iteration-count: 1
+    !important;
+    transition-duration: 0.01ms
+    !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   #Menu {
@@ -390,13 +509,43 @@ li {
     display: none;
   }
 
+  .Resume:hover, .service:hover, .middle:hover {
+    box-shadow: none;
+  }
+
+  .Resume:active, .service:active, .middle:active {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+    box-shadow: none;
+  }
+
   .skills {
     display: block;
+    line-height: 60px;
+    font-size: 1.5rem;
   }
 
   .active {
     margin-top: 3%;
     left: -5.5%;
+  }
+
+  .contain {
+    display: flex;
+    margin-top: 10rem;
+    gap: 3em;
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  *, ::after,
+  ::before {
+    box-sizing: content-box;
+  }
+
+  .contact-form .text-box  {
+    width: calc(104% - 30px);
+    opacity: 1;
   }
 }
 
@@ -409,6 +558,26 @@ li {
   .imgwrap h1, .imgwrap h3 {
     line-height: 50px;
   }
+  .contact-form .text-box  {
+    width: calc(190% - 30px);
+    opacity: 1;
+  }
+
+  .contact-form .textarea {
+    width: calc(190% - 30px);
+  }
+  
+  .contact-form {
+    display: flex;
+    margin-right: 7em;
+    flex-direction: column;
+  }
+
+  .submitbtn {
+    align-items: center;
+    justify-content: center;
+  }
+  
 }
 
 @media only screen and (max-width: 1003px) {

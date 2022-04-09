@@ -9,18 +9,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/9c5347d24a.js" crossorigin="anonymous"></script>
-    </head>
+        <script src="./scripts.js"></script>
+      </head>
     <header id="header" class="header">
-        <a href="./index.html" ><i id="dark1" class="fa-solid fa-house fa-xl dark2"></i></a>
-        <nav>
-            <ul>
-                <li><a href="./Projects.html" id="middle" class="middle">Projects</a></li>
-                <li><a href="./Contact.html" id="service" class="service">Contact</a></li>
-                <li><a href="" id="Resume" class="Resume" href="#">Resume</a></li>
-            </ul>
-        </nav>
+      <a href="./index.html" ><i id="dark1" class="fa-solid fa-house fa-xl dark2"></i></a>
+      <nav>
+          <ul id="nav-menu" class="nav-menu">
+              <li><a href="./Projects.html" id="middle" class="middle">Projects</a></li>
+              <li><a href="./Contact.html" id="service" class="service">Contact</a></li>
+              <li><a href="" id="Resume" class="Resume" href="#">Resume</a></li>
+          </ul>
+          <span><i onclick="darkmodeToggle()" id="Menu" class="fa-solid fa-xl fa-bars"></i></span>
+      </nav>
     </header>
-    <body>
+    <body id="body">
       <nav class="navbar">
         <ul class="navbar-nav">
           <li class="logo">
@@ -56,15 +58,8 @@
             </a>
           </li>
     
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i id="fa-twitter-square" class="fa-brands fa-twitter-square fa-2xl"></i>
-              <span class="link-text">Twitter</span>
-            </a>
-          </li>
-    
-          <li class="nav-item">
-            <a class="nav-link darkmode" onclick="helo()">
+          <li class="nav-item" onclick="darkmodeToggle()">
+            <a class="nav-link">
               <i id="fa-moon" class="fa-solid fa-moon fa-2xl"></i>
               <span class="link-text">Dark Mode</span>
             </a>
@@ -152,18 +147,30 @@
           </li>
         </ul>
       </nav>
-      <div id="contact-section" class="contact-section">
+      <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDOocX4ZXkzQm5n1E1r0_kXgqJwkNAbQsI
+        &q=Space+Needle,Seattle+WA">
+</iframe>
+      <div id="contact-section2" class="contact-section">
         <div class="contact-info">
             <i id="text1" class="fas fa-solid fa-location-dot"><br><a href="https://www.google.com/maps/place/Moscow/@55.5815245,36.8251405,9z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999" target="#">Moscow</a></i>
             <i id="text2" class="fas fa-solid fa-envelope"><br><a id="text2" class="">ismonovmukh@gmail.com</a></i>
         </div>
+        <h1 id="text3" class="" >Contact Me</h1>
         <div class="contact-form">
-            <h1 id="text3" class="" >Contact Me</h1>
             <form class="contact" action="mailto:ismonovmukh@gmail.com" method="post">
               <input type="text" name="name" id="text-box1" class="text-box" placeholder="Name" required>
               <input type="email" name="email" id="text-box2" class="text-box" placeholder="Email" required>
                 <textarea id="text-area" class="textarea" name="Message" rows="5" cols="80"></textarea>
-                <input value="SUBMIT" name="submit" class="send-btn" type="submit" >
+                <div class="submitbtn">
+                  <input value="SUBMIT" name="submit" class="send-btn" type="submit" >
+                </div>    
             </form>
         </div>
       </div>
